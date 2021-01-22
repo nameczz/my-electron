@@ -1,0 +1,14 @@
+on:
+  repository_dispatch:
+    types: test-action
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Run Inner Link Check
+        run: |
+          node test.js
