@@ -1,6 +1,6 @@
-on:
-  repository_dispatch:
-    types: test-action
+name: Build/release
+
+on: push
 
 jobs:
   migrate:
@@ -11,4 +11,4 @@ jobs:
 
       - name: Run Inner Link Check
         run: |
-          node test.js
+          node test2.js
